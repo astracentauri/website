@@ -1,0 +1,41 @@
+---
+interface Props {
+    title: string;
+    body: string;
+}
+
+const { title, body } = Astro.props;
+---
+
+<main class="module">
+    <a>
+        <h1>
+            {title}
+        </h1>
+        <p>
+            {body}
+        </p>
+    </a>
+</main>
+
+<style>
+    .module {
+        padding: 10px;
+        background-color: #1d1c2080;
+        border: 1px solid #2F2E31;
+        border-radius: 10px;
+        font-family: IBM Plex Mono,monospace;
+
+    }
+    h1 {
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+    p {
+        color: rgb(197, 197, 197);
+    }
+    .module:is(:hover, :focus-within) {
+        border-color: white;
+		background-color: #34323a7a;
+    }
+</style>
